@@ -7,8 +7,6 @@ public class time : MonoBehaviour {
     public UnityEngine.UI.Button btn;
     public FlockController flockcontroller;
 
-    public UnityEngine.UI.Text birdText;
-
     public int maxBird = 25;
 
     [Range(-100f, 100f)]
@@ -27,7 +25,6 @@ public class time : MonoBehaviour {
         {
             btn.interactable = true;
         }
-        birdText.text = flockcontroller._childAmount + " / " + maxBird;
     }
 
     public void clicked()
