@@ -1,0 +1,163 @@
+fileFormatVersion: 2
+guid: 702abb129273a4312a79369be6399eb5
+timeCreated: 1470113197
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Ground_01
+    100002: Ground_02
+    100004: Ground_03
+    100006: //RootNode
+    100008: Palm_01
+    100010: Palm_02
+    100012: Palm_03
+    100014: Palm_04
+    100016: Palm_05
+    100018: Palm_06
+    100020: Palm_07
+    100022: Palm_08
+    100024: Rock_01
+    100026: Rock_02
+    100028: Rock_03
+    100030: Rock_04
+    100032: Rock_05
+    100034: Rock_06
+    100036: Rock_07
+    400000: Ground_01
+    400002: Ground_02
+    400004: Ground_03
+    400006: //RootNode
+    400008: Palm_01
+    400010: Palm_02
+    400012: Palm_03
+    400014: Palm_04
+    400016: Palm_05
+    400018: Palm_06
+    400020: Palm_07
+    400022: Palm_08
+    400024: Rock_01
+    400026: Rock_02
+    400028: Rock_03
+    400030: Rock_04
+    400032: Rock_05
+    400034: Rock_06
+    400036: Rock_07
+    2300000: Ground_01
+    2300002: Ground_02
+    2300004: Ground_03
+    2300006: Palm_01
+    2300008: Palm_02
+    2300010: Palm_03
+    2300012: Palm_04
+    2300014: Palm_05
+    2300016: Palm_06
+    2300018: Palm_07
+    2300020: Palm_08
+    2300022: Rock_01
+    2300024: Rock_02
+    2300026: Rock_03
+    2300028: Rock_04
+    2300030: Rock_05
+    2300032: Rock_06
+    2300034: Rock_07
+    3300000: Ground_01
+    3300002: Ground_02
+    3300004: Ground_03
+    3300006: Palm_01
+    3300008: Palm_02
+    3300010: Palm_03
+    3300012: Palm_04
+    3300014: Palm_05
+    3300016: Palm_06
+    3300018: Palm_07
+    3300020: Palm_08
+    3300022: Rock_01
+    3300024: Rock_02
+    3300026: Rock_03
+    3300028: Rock_04
+    3300030: Rock_05
+    3300032: Rock_06
+    3300034: Rock_07
+    4300000: Ground_03
+    4300002: Ground_01
+    4300004: Palm_08
+    4300006: Palm_07
+    4300008: Palm_06
+    4300010: Palm_05
+    4300012: Palm_03
+    4300014: Palm_04
+    4300016: Palm_02
+    4300018: Palm_01
+    4300020: Rock_03
+    4300022: Rock_02
+    4300024: Rock_01
+    4300026: Rock_04
+    4300028: Rock_07
+    4300030: Rock_06
+    4300032: Rock_05
+    4300034: Ground_02
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
