@@ -1,4 +1,7 @@
-﻿//	Copyright 2015 Unluck Software	
+﻿// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
+// Upgrade NOTE: replaced '_World2Object' with 'unity_WorldToObject'
+
+//	Copyright 2015 Unluck Software	
 //	www.chemicalbliss.com
 Shader "Unluck Software/Vertex Color/Toon Simple Transparent"{
 	Properties {
@@ -39,9 +42,9 @@ Shader "Unluck Software/Vertex Color/Toon Simple Transparent"{
 			
 			v2f vert (appdata v) {
 				v2f o;
-				o.posWorld = mul(_Object2World, v.vertex);
+				o.posWorld = mul(unity_ObjectToWorld, v.vertex);
 				o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
-	            float4x4 modelMatrixInverse = _World2Object; 
+	            float4x4 modelMatrixInverse = unity_WorldToObject; 
 	            o.normalDir = normalize(float3(mul(float4(v.normal, 0.0), modelMatrixInverse).xyz));
 				o.lightDir = normalize(_WorldSpaceCameraPos.xyz - o.posWorld.xyz); 
 	            o.color = v.color;
