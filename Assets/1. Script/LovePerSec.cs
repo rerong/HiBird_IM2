@@ -18,7 +18,7 @@ public class LovePerSec : MonoBehaviour {
 		lpsDisplay.text = getTotalLPS().ToString("F0")+ "sec";
 
     }
-
+		
     public float getTotalLPS() 
     {
 		totalLPS = 0;

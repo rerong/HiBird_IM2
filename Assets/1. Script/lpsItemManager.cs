@@ -6,7 +6,7 @@ public class lpsItemManager : MonoBehaviour {
     public UnityEngine.UI.Text lpsBuyMoney;
     public float cost;
     public float objLPS;
-    private float level;
+	private int level = 0;
 	public touchMain touch;
 	private float baseCost;
 
@@ -29,4 +29,8 @@ public class lpsItemManager : MonoBehaviour {
 
         }
     }
+	public int getLevel()
+	{
+		return level;
+	}
 }

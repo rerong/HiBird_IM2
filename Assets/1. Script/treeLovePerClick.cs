@@ -4,10 +4,12 @@ using System.Collections;
 public class treeLovePerClick : MonoBehaviour {
 	public touchMain touch;
 	public UnityEngine.UI.Text treeBuyMoney;
-	private float baseCost = 10.0f;
-	private float cost = 10.0f;
-	private int count = 0;
-	private float touchPower = 1.0f;
+	public summonBirds summonBird;
+	private float cost = 2.0f;
+	private int level = 0;
+	private float LPC = 1.0f;
+	private float costRate = 1.07f;
+	private float LPCRate = 1.02f;
 
 	// Use this for initialization
 	void Start () {
@@ -19,7 +21,7 @@ public class treeLovePerClick : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		treeBuyMoney.text = cost.ToString ("F0") +"\n" +count + "level";
+		treeBuyMoney.text = cost.ToString ("F2") +"\n" + (level + 1) + "level";
     }
 
 	public void treeUpgrade()
@@ -27,12 +29,23 @@ public class treeLovePerClick : MonoBehaviour {
 		if (touch.getLove() >= cost)
 		{
 			touch.setLove (touch.getLove() - cost);
-			count += 1;
-			touch.setLPC(touch.getLPC() + touchPower);
+			level += 1;
+			summonBird.setClicked ();
 
-			touchPower = Mathf.Round(Mathf.Pow(touchPower, 1.2f));
-			cost = Mathf.Round(baseCost + Mathf.Pow(count, 2f));
+			if (level % 200 == 0) 
+			{
+				LPCRate += 0.01f;
+				costRate += 0.01f;
+			}
+
+			LPC *= LPCRate;
+			touch.setLPC (LPC);
+			cost *= costRate;
 
 		}
+	}
+	public int getLevel()
+	{
+		return level;
 	}
 }

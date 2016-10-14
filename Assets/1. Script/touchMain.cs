@@ -6,7 +6,7 @@ public class touchMain : MonoBehaviour {
     public UnityEngine.UI.Text loveDisplay;
     public UnityEngine.UI.Text lpcDisplay;
 
-    private float love = 100.0f;
+    private float love = 1000000.0f;
     private float lovePerClick = 1.0f;
     private float lovePerSec = 1.0f;
     // Use this for initialization
@@ -17,7 +17,7 @@ public class touchMain : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         loveDisplay.text = love.ToString("F0")+"\n";
-        lpcDisplay.text = lovePerClick + "click\n";
+		lpcDisplay.text = lovePerClick.ToString("F2") + "click\n";
 	}
 
     public void Clicked() {
