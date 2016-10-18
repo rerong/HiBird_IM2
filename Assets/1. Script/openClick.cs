@@ -8,23 +8,23 @@ public class openClick : MonoBehaviour {
 	public GameObject detailEarthPanel;
 	public GameObject detailBirdsPanel;
 	public GameObject detailCashPanel;
-    bool isOpen = false;
-	// Use this for initialization
+	bool isOpen = false;
+// Use this for initialization
 	void Start () {
 		menuPanel.gameObject.SetActive (isOpen);
 	}
-	
-	// Update is called once per frame
+
+// Update is called once per frame
 	void Update () {
 
 	}
 
-    public void Clicked() {
+	public void Clicked() {
 		isOpen = !isOpen;
 		menuPanel.gameObject.SetActive (isOpen);
 		detailTreePanel.gameObject.SetActive (isOpen);
 		detailEarthPanel.gameObject.SetActive (false);
 		detailBirdsPanel.gameObject.SetActive (false);
 		detailCashPanel.gameObject.SetActive (false);
-    }
+	}
 }

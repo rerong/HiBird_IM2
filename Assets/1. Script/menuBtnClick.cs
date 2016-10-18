@@ -14,14 +14,14 @@ public class menuBtnClick : MonoBehaviour {
 		otherPanel2.gameObject.SetActive (false);
 		otherPanel3.gameObject.SetActive (false);
 	}
-	
+
 	void Update () {
 	}
 
-    public void Clicked() {
+	public void Clicked() {
 		thisPanel.gameObject.SetActive (true);
 		otherPanel1.gameObject.SetActive (false);
 		otherPanel2.gameObject.SetActive (false);
 		otherPanel3.gameObject.SetActive (false);
-    }
+	}
 }

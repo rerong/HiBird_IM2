@@ -11,18 +11,18 @@ public class treeLovePerClick : MonoBehaviour {
 	private float costRate = 1.07f;
 	private float LPCRate = 1.02f;
 
-	// Use this for initialization
+// Use this for initialization
 	void Start () {
-        Material mt = Resources.Load("level", typeof(Material)) as Material;
-        Material mt2 = Resources.Load("level_2", typeof(Material)) as Material;
+		Material mt = Resources.Load("level", typeof(Material)) as Material;
+		Material mt2 = Resources.Load("level_2", typeof(Material)) as Material;
 
-    }
-	
-	// Update is called once per frame
+	}
+
+// Update is called once per frame
 	void Update () 
 	{
 		treeBuyMoney.text = cost.ToString ("F2") +"\n" + (level + 1) + "level";
-    }
+	}
 
 	public void treeUpgrade()
 	{

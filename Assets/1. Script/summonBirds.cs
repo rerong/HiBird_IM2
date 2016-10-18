@@ -10,12 +10,12 @@ public class summonBirds : MonoBehaviour {
 	public treeLovePerClick treeLPC;
 	private bool clicked = false;
 
-	// Use this for initialization
+// Use this for initialization
 	void Start () {
 
 	}
 
-	// Update is called once per frame
+// Update is called once per frame
 	void Update () 
 	{
 		foreach(lpsItemManager item in items) {

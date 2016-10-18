@@ -769,11 +769,11 @@ MonoBehaviour:
   _targetSpeed: 0
   _move: 1
   _model: {fileID: 100046}
-  _modelT: {fileID: 0}
+  _modelT: {fileID: 400040}
   _avoidValue: 0
   _avoidDistance: 0
   _avoid: 1
-  _thisT: {fileID: 0}
+  _thisT: {fileID: 400032}
 --- !u!137 &13700000
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

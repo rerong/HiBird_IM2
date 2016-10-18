@@ -13087,6 +13087,7 @@ GameObject:
   - 224: {fileID: 2095886603}
   - 222: {fileID: 2095886605}
   - 114: {fileID: 2095886604}
+  - 114: {fileID: 2095886606}
   m_Layer: 5
   m_Name: total_kilook
   m_TagString: Untagged
@@ -13151,6 +13152,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2095886602}
+--- !u!114 &2095886606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2095886602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07fb8cb91d4705a4d933b84d1f75444f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flockcontroller: {fileID: 1250911531}
+  birdText: {fileID: 2095886604}
 --- !u!1 &2096277336
 GameObject:
   m_ObjectHideFlags: 0
