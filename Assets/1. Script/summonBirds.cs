@@ -8,7 +8,7 @@ public class summonBirds : MonoBehaviour {
 	private int totalLPSLevel = 0;
 	public lpsItemManager[] items;
 	public treeLovePerClick treeLPC;
-	private bool clicked = false;
+	private bool summon = false;
 
 // Use this for initialization
 	void Start () {
@@ -18,21 +18,18 @@ public class summonBirds : MonoBehaviour {
 // Update is called once per frame
 	void Update () 
 	{
-		foreach(lpsItemManager item in items) {
-			totalLPSLevel += item.getLevel();
-		}
-		if(clicked)
+		if(summon)
 		{
-			if (flockcontroller._childAmount < maxBird && treeLPC.getLevel() % 50 == 0)
+			if (flockcontroller._childAmount < maxBird)
 			{
-				clicked = false;
+				summon = false;
 				flockcontroller._childAmount += 1;
 			}
 		}
 
 	}
-	public void setClicked()
+	public void setSummon()
 	{
-		clicked = true;
+		summon = true;
 	}
 }

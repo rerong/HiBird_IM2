@@ -6,7 +6,7 @@ public class treeLovePerClick : MonoBehaviour {
 	public UnityEngine.UI.Text treeBuyMoney;
 	public summonBirds summonBird;
 	private float cost = 2.0f;
-	private int level = 0;
+	private int level = 1;
 	private float LPC = 1.0f;
 	private float costRate = 1.07f;
 	private float LPCRate = 1.02f;
@@ -21,7 +21,7 @@ public class treeLovePerClick : MonoBehaviour {
 // Update is called once per frame
 	void Update () 
 	{
-		treeBuyMoney.text = cost.ToString ("F2") +"\n" + (level + 1) + "level";
+		treeBuyMoney.text = cost.ToString ("F2") +"\n" + level + "level";
 	}
 
 	public void treeUpgrade()
@@ -30,7 +30,8 @@ public class treeLovePerClick : MonoBehaviour {
 		{
 			touch.setLove (touch.getLove() - cost);
 			level += 1;
-			summonBird.setClicked ();
+			if(level == 10 || level % 25 == 0)
+				summonBird.setSummon ();
 
 			if (level % 200 == 0) 
 			{
