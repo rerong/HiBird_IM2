@@ -5,6 +5,8 @@ public class touchMain : MonoBehaviour {
 
 	public UnityEngine.UI.Text loveDisplay;
 	public UnityEngine.UI.Text lpcDisplay;
+	public FlockController flockcontroller;
+    public UnityEngine.UI.Text birdDisplay;
 
 	private float love = 1000000.0f;
 	private float lovePerClick = 1.0f;
@@ -18,6 +20,7 @@ public class touchMain : MonoBehaviour {
 	void Update () {
 		loveDisplay.text = love.ToString("F0")+"\n";
 		lpcDisplay.text = lovePerClick.ToString("F2") + "click\n";
+		birdDisplay.text = flockcontroller._childAmount + " / " + "25";
 	}
 
 	public void Clicked() {
