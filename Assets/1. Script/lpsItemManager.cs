@@ -3,14 +3,15 @@ using System.Collections;
 using UnityEngine.UI;
 public class lpsItemManager : MonoBehaviour 
 {
+	public canvasManager canvas;
 	public UnityEngine.UI.Text lpsBuyMoney;
 	public float cost;
 	public float objLPS;
 	private int level = 0;
-	public touchMain touch;
 	private float baseCost;
 
-	void Start() {
+	void Start() 
+	{
 		baseCost = cost;
 	}
 
@@ -20,9 +21,9 @@ public class lpsItemManager : MonoBehaviour
 
 	public void purchasedItem() 
 	{
-		if (touch.getLove() >= cost)
+		if (canvas.gameManaging.getLove() >= cost)
 		{
-			touch.setLove (touch.getLove() - cost);
+			canvas.gameManaging.setLove (canvas.gameManaging.getLove() - cost);
 			level += 1;
 			objLPS = objLPS * 1.2f;
 			cost = Mathf.Round(baseCost + Mathf.Pow(level, 2f));

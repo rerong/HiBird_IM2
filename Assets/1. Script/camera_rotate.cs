@@ -4,8 +4,7 @@ using System.Collections;
 public class camera_rotate : MonoBehaviour {
 
     private float CameraRotationSpeed_y = 12;
-    public UnityEngine.GameObject gameobject;
-    public UnityEngine.UI.Button button_rotate;
+	public canvasManager canvas;
     int count = 0;
 
     // Use this for initialization
@@ -25,7 +24,7 @@ public class camera_rotate : MonoBehaviour {
     }
     private void animationCamera()
     {
-        gameobject.transform.Rotate(CameraRotationSpeed_y / 100.0f, 0, 0);
+        canvas.cameraRotate.transform.Rotate(CameraRotationSpeed_y / 100.0f, 0, 0);
     }
     IEnumerator AutoTick()
     {
@@ -35,10 +34,10 @@ public class camera_rotate : MonoBehaviour {
             {
                 count = 0;
                 CameraRotationSpeed_y = -CameraRotationSpeed_y;
-                button_rotate.interactable = true;
+				canvas.menuBtn.interactable = true;
                 break;
             }
-            button_rotate.interactable = false;
+			canvas.menuBtn.interactable = false;
             count++;
             animationCamera();
             yield return new WaitForSeconds(0.01f);

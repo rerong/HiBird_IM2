@@ -3,39 +3,36 @@ using System.Collections;
 
 public class ColorBtnClick : MonoBehaviour {
 
-    public GameObject Btn;
-    public GameObject GrayPanel;
-    public GameObject YellowPanel;
-    public GameObject BluePanel;
+	public canvasManager canvas;
+	public GameObject btn;
 
-
-    void Start()
+    public void Start()
     {
-        GrayPanel.gameObject.SetActive(true);
-        YellowPanel.gameObject.SetActive(false);
-        BluePanel.gameObject.SetActive(false);
+		canvas.normalPanel.SetActive (true);
+		canvas.rarePanel.SetActive (false);
+		canvas.uniquePanel.SetActive (false);
     }
 
     public void Clicked()
     {
 
-        if (Btn.name.Contains("Gray"))
+		if (btn.name.Contains("normal"))
         {
-            GrayPanel.gameObject.SetActive(true);
-            YellowPanel.gameObject.SetActive(false);
-            BluePanel.gameObject.SetActive(false);
+			canvas.normalPanel.SetActive (true);
+			canvas.rarePanel.SetActive (false);
+			canvas.uniquePanel.SetActive (false);
         }
-        else if (Btn.name.Contains("Yellow"))
+		else if (btn.name.Contains("rare"))
         {
-            GrayPanel.gameObject.SetActive(false);
-            YellowPanel.gameObject.SetActive(true);
-            BluePanel.gameObject.SetActive(false);
+			canvas.normalPanel.SetActive (false);
+			canvas.rarePanel.SetActive (true);
+			canvas.uniquePanel.SetActive (false);
         }
-        else if (Btn.name.Contains("Blue"))
+		else if (btn.name.Contains("unique"))
         {
-            GrayPanel.gameObject.SetActive(false);
-            YellowPanel.gameObject.SetActive(false);
-            BluePanel.gameObject.SetActive(true);
+			canvas.normalPanel.SetActive (false);
+			canvas.rarePanel.SetActive (false);
+			canvas.uniquePanel.SetActive (true);
         }
 
     }

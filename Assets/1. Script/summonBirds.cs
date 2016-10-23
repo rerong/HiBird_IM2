@@ -5,7 +5,6 @@ public class summonBirds : MonoBehaviour {
 
 	public FlockController flockcontroller;
 	private int maxBird = 25;
-	private int totalLPSLevel = 0;
 	public lpsItemManager[] items;
 	public treeLovePerClick treeLPC;
 	private bool summon = false;

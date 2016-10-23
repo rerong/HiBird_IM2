@@ -3,18 +3,17 @@ using System.Collections;
 
 public class LovePerSec : MonoBehaviour 
 {
-    public UnityEngine.UI.Text lpsDisplay;
-    public touchMain touch;
+	public canvasManager canvas;
     private float totalLPS = 0.0f; //Love Per Second
 
     public lpsItemManager[] items;
 
     void Start() {
-        StartCoroutine(AutoTick());
+		StartCoroutine(AutoTick());
     }
 
     void Update() {
-        lpsDisplay.text = getTotalLPS().ToString("F0")+ "sec";
+        canvas.lpsDisplay.text = getTotalLPS().ToString("F0")+ "sec";
 
     }
 
@@ -29,7 +28,7 @@ public class LovePerSec : MonoBehaviour
     }
 
     public void AutoGoldPerSec() {
-        touch.setLove(touch.getLove() + totalLPS/10);
+		canvas.gameManaging.setLove(canvas.gameManaging.getLove() + totalLPS/10);
     }
 
     IEnumerator AutoTick() 

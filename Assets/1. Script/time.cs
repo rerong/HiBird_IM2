@@ -10,7 +10,7 @@ public class time : MonoBehaviour {
     private int maxBird = 25;
 
     [Range(-100f, 100f)]
-    public float summonTime;
+    public float summonTime = 5 * 60 * 60;
 
     void Start()
     {
@@ -30,7 +30,6 @@ public class time : MonoBehaviour {
             flockcontroller._childAmount += 1;
         else
             
-
         _silder.value = 0;
         btn.interactable = false;
 

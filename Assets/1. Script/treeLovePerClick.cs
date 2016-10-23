@@ -2,9 +2,8 @@
 using System.Collections;
 
 public class treeLovePerClick : MonoBehaviour {
-	public touchMain touch;
 	public UnityEngine.UI.Text treeBuyMoney;
-	public summonBirds summonBird;
+	public canvasManager canvas;
 	private float cost = 2.0f;
 	private int level = 1;
 	private float LPC = 1.0f;
@@ -15,7 +14,6 @@ public class treeLovePerClick : MonoBehaviour {
 	void Start () {
 		Material mt = Resources.Load("level", typeof(Material)) as Material;
 		Material mt2 = Resources.Load("level_2", typeof(Material)) as Material;
-
 	}
 
 // Update is called once per frame
@@ -26,12 +24,12 @@ public class treeLovePerClick : MonoBehaviour {
 
 	public void treeUpgrade()
 	{
-		if (touch.getLove() >= cost)
+		if (canvas.gameManaging.getLove() >= cost)
 		{
-			touch.setLove (touch.getLove() - cost);
+			canvas.gameManaging.setLove (canvas.gameManaging.getLove() - cost);
 			level += 1;
 			if(level == 10 || level % 25 == 0)
-				summonBird.setSummon ();
+				canvas.summonBird.setSummon ();
 
 			if (level % 200 == 0) 
 			{
@@ -40,7 +38,7 @@ public class treeLovePerClick : MonoBehaviour {
 			}
 
 			LPC *= LPCRate;
-			touch.setLPC (LPC);
+			canvas.gameManaging.setLPC (LPC);
 			cost *= costRate;
 
 		}
