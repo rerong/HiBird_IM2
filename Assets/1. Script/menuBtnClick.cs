@@ -8,10 +8,6 @@ public class menuBtnClick : MonoBehaviour {
 
 	public void Start()
 	{
-		canvas.treePanel.SetActive (false);
-		canvas.mountainPanel.SetActive (false);
-		canvas.birdPanel.SetActive (false);
-		canvas.cashPanel.SetActive (false);
 	}
 
 	public void Clicked()
