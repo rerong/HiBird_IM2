@@ -138,6 +138,10 @@ MonoBehaviour:
   lpsBuyMoney: {fileID: 596451498}
   cost: 1
   objLPS: 1
+  ground: {fileID: 0}
+  groundMaterial1: {fileID: 0}
+  groundMaterial2: {fileID: 0}
+  groundMaterial3: {fileID: 0}
 --- !u!114 &49388009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6530,6 +6534,10 @@ MonoBehaviour:
   lpsBuyMoney: {fileID: 2104424264}
   cost: 1
   objLPS: 1
+  ground: {fileID: 0}
+  groundMaterial1: {fileID: 0}
+  groundMaterial2: {fileID: 0}
+  groundMaterial3: {fileID: 0}
 --- !u!114 &827021151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8133,6 +8141,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   treeBuyMoney: {fileID: 1770286840}
   canvas: {fileID: 2025912699}
+  tree: {fileID: 1917637578}
 --- !u!114 &1105558709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9319,6 +9328,10 @@ MonoBehaviour:
   lpsBuyMoney: {fileID: 1151520185}
   cost: 1
   objLPS: 1
+  ground: {fileID: 1507903210}
+  groundMaterial1: {fileID: 2100000, guid: 3cced0f7663d55d41b8497ca5cdeb2f8, type: 2}
+  groundMaterial2: {fileID: 2100000, guid: f5504b2dcecb1294eacde548277f67f1, type: 2}
+  groundMaterial3: {fileID: 2100000, guid: ff2f905460a34604991e9f7334a916f0, type: 2}
 --- !u!114 &1325188773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10380,6 +10393,10 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!1 &1507903210 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 132930, guid: df5b5ed8ef9265048b7b526a6b18f64b, type: 2}
+  m_PrefabInternal: {fileID: 764436073}
 --- !u!1 &1529580626
 GameObject:
   m_ObjectHideFlags: 0
@@ -12256,6 +12273,10 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1911772107}
+--- !u!1 &1917637578 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 159616, guid: 3a613261d91df45628fd1d3658bc0b32, type: 2}
+  m_PrefabInternal: {fileID: 1468827704}
 --- !u!1 &1929497004
 GameObject:
   m_ObjectHideFlags: 0
@@ -14112,6 +14133,10 @@ MonoBehaviour:
   lpsBuyMoney: {fileID: 1042177763}
   cost: 1
   objLPS: 1
+  ground: {fileID: 0}
+  groundMaterial1: {fileID: 0}
+  groundMaterial2: {fileID: 0}
+  groundMaterial3: {fileID: 0}
 --- !u!114 &2046891118
 MonoBehaviour:
   m_ObjectHideFlags: 0

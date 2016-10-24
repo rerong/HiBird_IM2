@@ -4,22 +4,51 @@ using System.Collections;
 public class treeLovePerClick : MonoBehaviour {
 	public UnityEngine.UI.Text treeBuyMoney;
 	public canvasManager canvas;
+	public GameObject tree;
+
 	private float cost = 2.0f;
-	private int level = 1;
+    //현진 추가
+    private float costView;
+	private string costViewDanwe;
+
+    private int level = 1;
 	private float LPC = 1.0f;
 	private float costRate = 1.07f;
 	private float LPCRate = 1.02f;
 
 // Use this for initialization
 	void Start () {
-		Material mt = Resources.Load("level", typeof(Material)) as Material;
-		Material mt2 = Resources.Load("level_2", typeof(Material)) as Material;
 	}
 
 // Update is called once per frame
 	void Update () 
 	{
-		treeBuyMoney.text = cost.ToString ("F2") +"\n" + level + "level";
+        //현진 추가
+        costView = cost;
+		costViewDanwe = "";
+
+		if (costView / 1000 > 1) {
+			costView = costView / 1000;
+			costViewDanwe = "a";
+			if(costView/1000 > 1){
+				costView = costView/1000;
+				costViewDanwe = "b";
+				if(costView/1000 > 1){
+					costView = costView/1000;
+					costViewDanwe = "c";
+					if (costView / 1000 > 1) {
+						costView = costView / 1000;
+						costViewDanwe = "d";
+						if (costView / 1000 > 1) {
+							costView = costView / 1000;
+							costViewDanwe = "e";
+						}
+					}
+				}
+			}
+		}
+
+		treeBuyMoney.text = costView.ToString ("F2") + costViewDanwe + "\n" + level + "level";
 	}
 
 	public void treeUpgrade()
@@ -30,6 +59,9 @@ public class treeLovePerClick : MonoBehaviour {
 			level += 1;
 			if(level == 10 || level % 25 == 0)
 				canvas.summonBird.setSummon ();
+
+            //현진 추가
+			tree.GetComponent<MeshRenderer> ().material.color = Color.Lerp (Color.gray,Color.white,level*0.0025f);
 
 			if (level % 200 == 0) 
 			{

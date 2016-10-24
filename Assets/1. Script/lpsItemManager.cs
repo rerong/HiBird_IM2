@@ -10,7 +10,13 @@ public class lpsItemManager : MonoBehaviour
 	private int level = 0;
 	private float baseCost;
 
-	void Start() 
+    //현진 추가
+    public GameObject ground;
+    public Material groundMaterial1;
+    public Material groundMaterial2;
+    public Material groundMaterial3;
+
+    void Start() 
 	{
 		baseCost = cost;
 	}
@@ -29,7 +35,12 @@ public class lpsItemManager : MonoBehaviour
 			cost = Mathf.Round(baseCost + Mathf.Pow(level, 2f));
 
 		}
-	}
+        //현진 추가
+        if(level <= 200)
+            ground.GetComponent<MeshRenderer>().material.color = Color.Lerp(groundMaterial1.color, groundMaterial2.color, level * 0.005f);
+        if (level < 400 && level > 200)
+            ground.GetComponent<MeshRenderer>().material.color = Color.Lerp(groundMaterial2.color, groundMaterial3.color, (level-200) * 0.005f);
+    }
 	public int getLevel()
 	{
 		return level;

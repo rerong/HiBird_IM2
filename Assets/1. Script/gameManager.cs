@@ -1,11 +1,12 @@
-﻿using UnityEngine;
+﻿
+using UnityEngine;
 using System.Collections;
 
 public class gameManager : MonoBehaviour 
 {
 	public canvasManager canvas;
 	private float love = 1000000.0f;
-	private float lovePerClick = 1.0f;
+    private float lovePerClick = 1.0f;
 	private float lovePerSec = 1.0f;
 
 	void Start () {
@@ -13,6 +14,8 @@ public class gameManager : MonoBehaviour
 
 // Update is called once per frame
 	void Update () {
+
+
 		canvas.loveDisplay.text = love.ToString("F0")+"\n";
 		canvas.lpcDisplay.text = lovePerClick.ToString("F2") + "click\n";
 		canvas.birdDisplay.text = canvas.flockcontroller._childAmount + " / " + "25";
