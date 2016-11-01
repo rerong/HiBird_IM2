@@ -17,7 +17,14 @@ public class canvasManager : MonoBehaviour {
 	public Text lpsDisplay;
 	public Text cashDisplay;
 	public Text birdDisplay;
-	public Button menuBtn;
+    /*add pop-up ui*/
+    public GameObject explainPanel;
+    public Text explanationOfBirdDisplay;
+    public Text nameOfBirdDisplay;
+    public Text totalQuntityDisplay;
+    public Text nowQuntityDisplay;
+    /*for here*/
+    public Button menuBtn;
 	public GameObject normalPanel;
 	public GameObject rarePanel;
 	public GameObject uniquePanel;
