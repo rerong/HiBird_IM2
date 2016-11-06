@@ -17,7 +17,7 @@ public class canvasManager : MonoBehaviour {
 	public Text lpsDisplay;
 	public Text cashDisplay;
 	public Text birdDisplay;
-    /*add pop-up ui*/
+    /*add*/
     public GameObject explainPanel;
     public Text explanationOfBirdDisplay;
     public Text nameOfBirdDisplay;
