@@ -124,10 +124,10 @@ RectTransform:
   - {fileID: 149030680}
   m_Father: {fileID: 29292684}
   m_RootOrder: 3
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 350, y: 0}
-  m_SizeDelta: {x: 70, y: 70}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &11124944
 MonoBehaviour:
@@ -142,12 +142,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 2025912699}
   btn: {fileID: 11124942}
-  thisBird: {fileID: 0}
   nameOfBird: {fileID: 1629783541}
   explanationOfBird: {fileID: 149030681}
-  quntityNow: 0
-  totalQuntity: 0
-  total: []
 --- !u!114 &11124945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -267,10 +263,10 @@ RectTransform:
   - {fileID: 1399544493}
   m_Father: {fileID: 1943341569}
   m_RootOrder: 4
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 450, y: 0}
-  m_SizeDelta: {x: 70, y: 70}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &20892324
 MonoBehaviour:
@@ -285,12 +281,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 2025912699}
   btn: {fileID: 20892322}
-  thisBird: {fileID: 0}
   nameOfBird: {fileID: 1096751054}
   explanationOfBird: {fileID: 1399544494}
-  quntityNow: 0
-  totalQuntity: 0
-  total: []
 --- !u!114 &20892325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -649,10 +641,10 @@ RectTransform:
   - {fileID: 1588167149}
   m_Father: {fileID: 1943341569}
   m_RootOrder: 5
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: -100}
-  m_SizeDelta: {x: 70, y: 70}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &74612123
 MonoBehaviour:
@@ -667,12 +659,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 2025912699}
   btn: {fileID: 74612121}
-  thisBird: {fileID: 0}
   nameOfBird: {fileID: 1732570275}
   explanationOfBird: {fileID: 1588167150}
-  quntityNow: 0
-  totalQuntity: 0
-  total: []
 --- !u!114 &74612124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -905,10 +893,10 @@ RectTransform:
   - {fileID: 896501477}
   m_Father: {fileID: 789916445}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: 0}
-  m_SizeDelta: {x: 70, y: 70}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &84287745
 MonoBehaviour:
@@ -1008,12 +996,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 2025912699}
   btn: {fileID: 84287743}
-  thisBird: {fileID: 0}
   nameOfBird: {fileID: 1724514258}
   explanationOfBird: {fileID: 896501478}
-  quntityNow: 0
-  totalQuntity: 0
-  total: []
 --- !u!1 &87274522
 GameObject:
   m_ObjectHideFlags: 0
@@ -1473,10 +1457,10 @@ RectTransform:
   - {fileID: 698632578}
   m_Father: {fileID: 1943341569}
   m_RootOrder: 9
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 450, y: -100}
-  m_SizeDelta: {x: 70, y: 70}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &124377483
 MonoBehaviour:
@@ -1491,12 +1475,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 2025912699}
   btn: {fileID: 124377481}
-  thisBird: {fileID: 0}
   nameOfBird: {fileID: 988009814}
   explanationOfBird: {fileID: 698632579}
-  quntityNow: 0
-  totalQuntity: 0
-  total: []
 --- !u!114 &124377484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1922,12 +1902,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 2025912699}
   btn: {fileID: 212505192}
-  thisBird: {fileID: 0}
   nameOfBird: {fileID: 0}
   explanationOfBird: {fileID: 0}
-  quntityNow: 0
-  totalQuntity: 0
-  total: []
 --- !u!114 &212505195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2112,7 +2088,7 @@ RectTransform:
   m_Father: {fileID: 1735628829}
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2837,10 +2813,10 @@ RectTransform:
   - {fileID: 922992284}
   m_Father: {fileID: 1943341569}
   m_RootOrder: 8
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 350, y: -100}
-  m_SizeDelta: {x: 70, y: 70}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &411908632
 MonoBehaviour:
@@ -2855,12 +2831,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 2025912699}
   btn: {fileID: 411908630}
-  thisBird: {fileID: 0}
   nameOfBird: {fileID: 1012924861}
   explanationOfBird: {fileID: 922992285}
-  quntityNow: 0
-  totalQuntity: 0
-  total: []
 --- !u!114 &411908633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5645,7 +5617,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &633994535
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5937,10 +5909,10 @@ RectTransform:
   - {fileID: 381153706}
   m_Father: {fileID: 1943341569}
   m_RootOrder: 3
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 350, y: 0}
-  m_SizeDelta: {x: 70, y: 70}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &651748020
 MonoBehaviour:
@@ -5955,12 +5927,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 2025912699}
   btn: {fileID: 651748018}
-  thisBird: {fileID: 0}
   nameOfBird: {fileID: 520120299}
   explanationOfBird: {fileID: 381153707}
-  quntityNow: 0
-  totalQuntity: 0
-  total: []
 --- !u!114 &651748021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8244,10 +8212,10 @@ RectTransform:
   - {fileID: 1886093400}
   m_Father: {fileID: 29292684}
   m_RootOrder: 2
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 250, y: 0}
-  m_SizeDelta: {x: 70, y: 70}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &770174987
 MonoBehaviour:
@@ -8262,12 +8230,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 2025912699}
   btn: {fileID: 770174985}
-  thisBird: {fileID: 0}
   nameOfBird: {fileID: 1755970548}
   explanationOfBird: {fileID: 1886093401}
-  quntityNow: 0
-  totalQuntity: 0
-  total: []
 --- !u!114 &770174988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8634,10 +8598,10 @@ RectTransform:
   - {fileID: 98067116}
   m_Father: {fileID: 1943341569}
   m_RootOrder: 1
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 150, y: 0}
-  m_SizeDelta: {x: 70, y: 70}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &817332029
 MonoBehaviour:
@@ -8652,12 +8616,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 2025912699}
   btn: {fileID: 817332027}
-  thisBird: {fileID: 0}
   nameOfBird: {fileID: 1993822672}
   explanationOfBird: {fileID: 98067117}
-  quntityNow: 0
-  totalQuntity: 0
-  total: []
 --- !u!114 &817332030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9067,10 +9027,10 @@ RectTransform:
   - {fileID: 1398392353}
   m_Father: {fileID: 789916445}
   m_RootOrder: 2
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 250, y: 0}
-  m_SizeDelta: {x: 70, y: 70}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &898590850
 MonoBehaviour:
@@ -9085,12 +9045,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 2025912699}
   btn: {fileID: 898590848}
-  thisBird: {fileID: 0}
   nameOfBird: {fileID: 477378286}
   explanationOfBird: {fileID: 1398392354}
-  quntityNow: 0
-  totalQuntity: 0
-  total: []
 --- !u!114 &898590851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10433,12 +10389,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 2025912699}
   btn: {fileID: 1017487296}
-  thisBird: {fileID: 0}
   nameOfBird: {fileID: 0}
   explanationOfBird: {fileID: 0}
-  quntityNow: 0
-  totalQuntity: 0
-  total: []
 --- !u!1 &1042177761
 GameObject:
   m_ObjectHideFlags: 0
@@ -11365,10 +11317,10 @@ RectTransform:
   - {fileID: 611765580}
   m_Father: {fileID: 789916445}
   m_RootOrder: 4
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 450, y: 0}
-  m_SizeDelta: {x: 70, y: 70}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1181614055
 MonoBehaviour:
@@ -11383,12 +11335,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 2025912699}
   btn: {fileID: 1181614053}
-  thisBird: {fileID: 0}
   nameOfBird: {fileID: 87274524}
   explanationOfBird: {fileID: 611765581}
-  quntityNow: 0
-  totalQuntity: 0
-  total: []
 --- !u!114 &1181614056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11582,10 +11530,10 @@ RectTransform:
   - {fileID: 1365318944}
   m_Father: {fileID: 1943341569}
   m_RootOrder: 7
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 250, y: -100}
-  m_SizeDelta: {x: 70, y: 70}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1198337485
 MonoBehaviour:
@@ -11600,12 +11548,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 2025912699}
   btn: {fileID: 1198337483}
-  thisBird: {fileID: 0}
   nameOfBird: {fileID: 2067568336}
   explanationOfBird: {fileID: 1365318945}
-  quntityNow: 0
-  totalQuntity: 0
-  total: []
 --- !u!114 &1198337486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13534,7 +13478,7 @@ RectTransform:
   m_Father: {fileID: 965786715}
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -13842,12 +13786,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 2025912699}
   btn: {fileID: 1637411877}
-  thisBird: {fileID: 0}
   nameOfBird: {fileID: 0}
   explanationOfBird: {fileID: 0}
-  quntityNow: 0
-  totalQuntity: 0
-  total: []
 --- !u!1001 &1640896044
 Prefab:
   m_ObjectHideFlags: 0
@@ -14107,10 +14047,10 @@ RectTransform:
   - {fileID: 1371817746}
   m_Father: {fileID: 1943341569}
   m_RootOrder: 2
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 250, y: 0}
-  m_SizeDelta: {x: 70, y: 70}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1685377511
 MonoBehaviour:
@@ -14125,12 +14065,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 2025912699}
   btn: {fileID: 1685377509}
-  thisBird: {fileID: 0}
   nameOfBird: {fileID: 2027413051}
   explanationOfBird: {fileID: 1371817747}
-  quntityNow: 0
-  totalQuntity: 0
-  total: []
 --- !u!114 &1685377512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14563,10 +14499,10 @@ RectTransform:
   - {fileID: 1669790412}
   m_Father: {fileID: 29292684}
   m_RootOrder: 1
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 150, y: 0}
-  m_SizeDelta: {x: 70, y: 70}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1754440615
 MonoBehaviour:
@@ -14581,12 +14517,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 2025912699}
   btn: {fileID: 1754440613}
-  thisBird: {fileID: 0}
   nameOfBird: {fileID: 1329833942}
   explanationOfBird: {fileID: 1669790413}
-  quntityNow: 0
-  totalQuntity: 0
-  total: []
 --- !u!114 &1754440616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15406,10 +15338,10 @@ RectTransform:
   - {fileID: 918680251}
   m_Father: {fileID: 1943341569}
   m_RootOrder: 6
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 150, y: -100}
-  m_SizeDelta: {x: 70, y: 70}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1887758660
 MonoBehaviour:
@@ -15424,12 +15356,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 2025912699}
   btn: {fileID: 1887758658}
-  thisBird: {fileID: 0}
   nameOfBird: {fileID: 1871808666}
   explanationOfBird: {fileID: 918680252}
-  quntityNow: 0
-  totalQuntity: 0
-  total: []
 --- !u!114 &1887758661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17799,10 +17727,10 @@ RectTransform:
   - {fileID: 1921936178}
   m_Father: {fileID: 1943341569}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: 0}
-  m_SizeDelta: {x: 70, y: 70}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &2022767760
 MonoBehaviour:
@@ -17817,12 +17745,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 2025912699}
   btn: {fileID: 2022767758}
-  thisBird: {fileID: 0}
   nameOfBird: {fileID: 881169139}
   explanationOfBird: {fileID: 1921936179}
-  quntityNow: 0
-  totalQuntity: 0
-  total: []
 --- !u!114 &2022767761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18376,10 +18300,10 @@ RectTransform:
   - {fileID: 1894244544}
   m_Father: {fileID: 789916445}
   m_RootOrder: 3
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 350, y: 0}
-  m_SizeDelta: {x: 70, y: 70}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &2061667408
 MonoBehaviour:
@@ -18394,12 +18318,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 2025912699}
   btn: {fileID: 2061667406}
-  thisBird: {fileID: 0}
   nameOfBird: {fileID: 1651079039}
   explanationOfBird: {fileID: 1894244545}
-  quntityNow: 0
-  totalQuntity: 0
-  total: []
 --- !u!114 &2061667409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18593,10 +18513,10 @@ RectTransform:
   - {fileID: 1533084292}
   m_Father: {fileID: 789916445}
   m_RootOrder: 1
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 150, y: 0}
-  m_SizeDelta: {x: 70, y: 70}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &2070555235
 MonoBehaviour:
@@ -18611,12 +18531,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 2025912699}
   btn: {fileID: 2070555233}
-  thisBird: {fileID: 0}
   nameOfBird: {fileID: 1184151307}
   explanationOfBird: {fileID: 1533084293}
-  quntityNow: 0
-  totalQuntity: 0
-  total: []
 --- !u!114 &2070555236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18858,10 +18774,10 @@ RectTransform:
   - {fileID: 633965781}
   m_Father: {fileID: 29292684}
   m_RootOrder: 4
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 450, y: 0}
-  m_SizeDelta: {x: 70, y: 70}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &2082574960
 MonoBehaviour:
@@ -18876,12 +18792,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 2025912699}
   btn: {fileID: 2082574958}
-  thisBird: {fileID: 0}
   nameOfBird: {fileID: 1329972542}
   explanationOfBird: {fileID: 633965782}
-  quntityNow: 0
-  totalQuntity: 0
-  total: []
 --- !u!114 &2082574961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19001,10 +18913,10 @@ RectTransform:
   - {fileID: 2053599495}
   m_Father: {fileID: 29292684}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: 0}
-  m_SizeDelta: {x: 70, y: 70}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &2093806398
 MonoBehaviour:
@@ -19104,12 +19016,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 2025912699}
   btn: {fileID: 2093806396}
-  thisBird: {fileID: 0}
   nameOfBird: {fileID: 778279973}
   explanationOfBird: {fileID: 2053599496}
-  quntityNow: 0
-  totalQuntity: 0
-  total: []
 --- !u!1 &2095886602
 GameObject:
   m_ObjectHideFlags: 0

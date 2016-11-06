@@ -5,17 +5,17 @@ public class explainPanelShow : MonoBehaviour {
 
     public canvasManager canvas;
     public GameObject btn;
-    public GameObject thisBird;
+   // public GameObject thisBird;
     public UnityEngine.UI.Text nameOfBird;
     public UnityEngine.UI.Text explanationOfBird;
-    public int quntityNow = 0;
-    public int totalQuntity;
-    public GameObject[] total;
+   // public int quntityNow = 0;
+   // public int totalQuntity;
+   // public GameObject[] total;
 
     void Start () {
 
         canvas.explainPanel.SetActive(false);
-        total = GameObject.FindGameObjectsWithTag(thisBird.tag);
+    /*    total = GameObject.FindGameObjectsWithTag(thisBird.tag);
         totalQuntity = total.Length;
         canvas.totalQuntityDisplay.text = totalQuntity.ToString();
 
@@ -27,7 +27,7 @@ public class explainPanelShow : MonoBehaviour {
                 quntityNow += 1;
             }
         }
-        
+        */
     }
 
     public void Clicked()
@@ -44,7 +44,8 @@ public class explainPanelShow : MonoBehaviour {
         {
             canvas.explainPanel.SetActive(false);
         }
-        else if (btn.name.Contains("up"))
+        /*
+       else if (btn.name.Contains("up"))
         {
             if (quntityNow < totalQuntity)
             {
@@ -60,7 +61,7 @@ public class explainPanelShow : MonoBehaviour {
                 canvas.nowQuntityDisplay.text = quntityNow.ToString();
             }
         }
-
+        */
 
     }
 
