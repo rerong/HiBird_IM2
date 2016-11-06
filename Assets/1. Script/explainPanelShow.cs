@@ -1,13 +1,12 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class explainPanelShow : MonoBehaviour {
 
     public canvasManager canvas;
-    public GameObject btn;
+    public Button btn;
    // public GameObject thisBird;
-    public UnityEngine.UI.Text nameOfBird;
-    public UnityEngine.UI.Text explanationOfBird;
    // public int quntityNow = 0;
    // public int totalQuntity;
    // public GameObject[] total;
@@ -35,8 +34,8 @@ public class explainPanelShow : MonoBehaviour {
 
         if (btn.name.Contains("Bird"))
         {
-            canvas.nameOfBirdDisplay.text = nameOfBird.text;
-            canvas.explanationOfBirdDisplay.text = explanationOfBird.text;
+            canvas.nameOfBirdDisplay.text = btn.transform.FindChild("name").GetComponent<Text>().text;
+            canvas.explanationOfBirdDisplay.text = btn.transform.FindChild("explain").GetComponent<Text>().text;
             canvas.explainPanel.SetActive(true);
 
         }
