@@ -14,9 +14,10 @@ public class lpsItemManager : MonoBehaviour
 
     //현진 추가
     public GameObject ground;
-    public Material groundMaterial1;
-    public Material groundMaterial2;
-    public Material groundMaterial3;
+    public GameObject or;
+
+    private Vector3 origin;
+    private Vector3 trans;
 
     void Start() 
 	{
@@ -28,7 +29,10 @@ public class lpsItemManager : MonoBehaviour
 			unitStr = calc.returnChangeUnit ();
 		}
 
-	}
+        // 현진 추가
+        origin = ground.transform.position;
+        trans = or.transform.position;
+    }
 
 	void Update() 
 	{
@@ -60,13 +64,23 @@ public class lpsItemManager : MonoBehaviour
 			unitStr = calc.returnChangeUnit ();
 		}
 
-        //현진 추가
-        if(level <= 50)
-            ground.GetComponent<MeshRenderer>().material.color 
-			= Color.Lerp(groundMaterial1.color, groundMaterial2.color, level * 0.005f);
-        else if (level < 100)
-            ground.GetComponent<MeshRenderer>().material.color 
-			= Color.Lerp(groundMaterial2.color, groundMaterial3.color, (level-200) * 0.005f);
+        // 현진 추가
+        if (origin == trans)
+        {
+            if (level <= 200)
+                ground.GetComponent<MeshRenderer>().material.color = Color.Lerp(canvas.level0.color, canvas.level1.color, (level * 0.005f));
+            else if (level < 400 && level > 200)
+                ground.GetComponent<MeshRenderer>().material.color = Color.Lerp(canvas.level1.color, canvas.level2.color, (level - 200) * 0.005f);
+        }
+        else
+        {
+            if (level <= 50)
+                ground.transform.position = Vector3.Lerp(origin, trans, level * 0.02f);
+            else if (level <= 250 && level > 50)
+                ground.GetComponent<MeshRenderer>().material.color = Color.Lerp(canvas.level0.color, canvas.level1.color, (level - 50) * 0.005f);
+            else if (level < 450 && level > 250)
+                ground.GetComponent<MeshRenderer>().material.color = Color.Lerp(canvas.level1.color, canvas.level2.color, (level - 250) * 0.005f);
+        }
     }
 	public int getLevel()
 	{

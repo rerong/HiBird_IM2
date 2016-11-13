@@ -16,7 +16,6 @@ public class summonBirds : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        canvas.birdTimeSummonBtn.interactable = false;
 	}
 
 // Update is called once per frame
@@ -31,20 +30,6 @@ public class summonBirds : MonoBehaviour {
 			}
 		}
 
-        canvas.sumonBirdSilder.value += Time.deltaTime / summonTime;
-        if (canvas.sumonBirdSilder.value == 1)
-            canvas.birdTimeSummonBtn.interactable = true;
-
-    }
-
-    public void clicked()
-    {
-        if (canvas.flockcontroller._childAmount < maxBird)
-        {
-            canvas.flockcontroller._childAmount += 1;
-            canvas.sumonBirdSilder.value = 0;
-            canvas.birdTimeSummonBtn.interactable = false;
-        }
     }
 
     public void setSummon()

@@ -49,4 +49,8 @@ public class canvasManager : MonoBehaviour {
 	public GameObject cashPanel;
 
     public Slider sumonBirdSilder;
+
+    public Material level0;
+    public Material level1;
+    public Material level2;
 }
