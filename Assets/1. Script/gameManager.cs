@@ -8,17 +8,19 @@ public class gameManager : MonoBehaviour
 	private float love = 980.0f;
     private float lovePerClick = 1.0f;
 	private float lovePerSec = 1.0f;
-	private int loveUnit = 65;
+	private int loveUnit = 64;
 	private string loveUnitStr = null;
 	private int lpcUnit = 64;
 	private string lpcUnitStr = null;
 	private int lpsUnit = 64;
 	private string lpsUnitStr = null;
+	private int treeLevel;
 
 	private loveCalc calc = new loveCalc();
 
 	void Start () 
 	{
+		treeLevel = 0;
 	}
 
 // Update is called once per frame
@@ -31,14 +33,17 @@ public class gameManager : MonoBehaviour
 			loveUnitStr = calc.returnChangeUnit ();
 		}
 
-		canvas.loveDisplay.text = love.ToString ("F2") + loveUnitStr + "love";
-		canvas.lpcDisplay.text = lovePerClick.ToString("F2") + lpcUnitStr + "click";
+		canvas.loveDisplay.text = love.ToString ("F2") + loveUnitStr;
+		canvas.lpcDisplay.text = lovePerClick.ToString("F2") + lpcUnitStr;
 		canvas.birdDisplay.text = canvas.flockcontroller._childAmount + " / " + "25";
-		canvas.lpsDisplay.text = lovePerSec.ToString ("F2") + lpsUnitStr + "sec";
+		canvas.lpsDisplay.text = lovePerSec.ToString ("F2") + lpsUnitStr;
 	}
 
 	public void Clicked() {
 		calc.addCalc (love, loveUnit, lovePerClick, lpcUnit);
+		love = calc.returnChangeCost ();
+		loveUnit = calc.returnChangeNumUnit ();
+		loveUnitStr = calc.returnChangeUnit ();
 	}
 
 	public float getLove()
@@ -61,6 +66,11 @@ public class gameManager : MonoBehaviour
 		return lovePerSec;
 	}
 
+	public int getTreeLevel()
+	{
+		return treeLevel;
+	}
+
 	public void setLove(float _love, int _unit, string _unitStr)
 	{
 		this.love = _love;
@@ -80,5 +90,10 @@ public class gameManager : MonoBehaviour
 		this.lovePerSec = _lps;
 		this.lpsUnit = _lpsUnit;
 		this.lpsUnitStr = _lpsUnitStr;
+	}
+
+	public void setTreeLevel(int _treeLevel)
+	{
+		this.treeLevel = _treeLevel;
 	}
 }

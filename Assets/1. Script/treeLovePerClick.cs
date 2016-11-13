@@ -38,11 +38,11 @@ public class treeLovePerClick : MonoBehaviour {
 
 	public void treeUpgrade()
 	{		
-		Debug.Log ("tree click before" + canvas.gameManaging.getLove() + "  " + canvas.gameManaging.getLoveUnit());
 		if (calc.compareCalc(canvas.gameManaging.getLove(), canvas.gameManaging.getLoveUnit(), cost, unit))
 		{
 			canvas.gameManaging.setLove (calc.returnChangeCost(), calc.returnChangeNumUnit(), calc.returnChangeUnit());
 			level += 1;
+			canvas.gameManaging.setTreeLevel (level);
 
 			if(level == 10 || level % 25 == 0)
 				canvas.summonBird.setSummon ();
@@ -73,9 +73,6 @@ public class treeLovePerClick : MonoBehaviour {
 				unit = calc.returnChangeNumUnit ();
 				unitStr = calc.returnChangeUnit ();
 			}
-
-			Debug.Log ("tree click " + cost + " " + unit + " ");
-
 		}
 	}
 	public int getLevel()

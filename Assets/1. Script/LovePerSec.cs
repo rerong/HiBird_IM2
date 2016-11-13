@@ -24,12 +24,17 @@ public class LovePerSec : MonoBehaviour
 	public void calcTotal()
 	{
 		totalLPS = 0;
+		totalLPSUnit = 64;
+
 		foreach(lpsItemManager item in items) 
 		{
-			calc.addCalc (totalLPS, totalLPSUnit, item.objLPS, item.objUnit);
-			totalLPS = calc.returnChangeCost();
-			totalLPSUnit = calc.returnChangeNumUnit ();
-			totalLPSStrUnit = calc.returnChangeUnit ();
+			if (item.getShow() == true) 
+			{
+				calc.addCalc (totalLPS, totalLPSUnit, item.getObjLPS(), item.getObjUnit());
+				totalLPS = calc.returnChangeCost();
+				totalLPSUnit = calc.returnChangeNumUnit ();
+				totalLPSStrUnit = calc.returnChangeUnit ();
+			}
 		}
 	}
 

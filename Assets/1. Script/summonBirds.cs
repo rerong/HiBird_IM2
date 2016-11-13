@@ -4,13 +4,6 @@ using System.Collections;
 public class summonBirds : MonoBehaviour {
 
     public canvasManager canvas;
-
-	public lpsItemManager[] items;
-	public treeLovePerClick treeLPC;
-
-    [Range(-100f, 100f)]
-    public float summonTime;
-
     private bool summon = false;
     private int maxBird = 25;
 

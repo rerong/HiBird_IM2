@@ -51,6 +51,8 @@ public class loveCalc : MonoBehaviour
 
 	public bool compareCalc(float costFirst, int unitFirst, float costSecond, int unitSecond)
 	{
+		calcCost = 0;
+		calcUnit = 0;
 		if(unitFirst < unitSecond)
 			return false;
 		else
@@ -82,6 +84,9 @@ public class loveCalc : MonoBehaviour
 
 	public void addCalc(float costFirst, int unitFirst, float costSecond, int unitSecond)
 	{
+		calcCost = 0;
+		calcUnit = 0;
+
 		if (unitFirst == unitSecond)
 		{
 			calcCost = costFirst + costSecond;
@@ -93,15 +98,15 @@ public class loveCalc : MonoBehaviour
 			{
 				int costUnitChange = unitFirst - unitSecond;
 				costFirst = costFirst * Mathf.Pow (1000.0f, costUnitChange);
-				calcCost = costFirst + unitSecond;
+				calcCost = costFirst + costSecond;
 				calcUnit = unitSecond;
 			} 
 			else 
 			{
 				int costUnitChange = unitSecond - unitFirst;
 				costSecond = costSecond * Mathf.Pow (1000.0f, costUnitChange);
-				calcCost = costFirst + unitSecond;
-				calcUnit = unitSecond;
+				calcCost = costFirst + costSecond;
+				calcUnit = unitFirst;
 			}
 		}
 
