@@ -24,11 +24,11 @@ public class lpsItemManager : MonoBehaviour
 
     void Start() 
 	{
-		if (objUnit == 64)
+		if (unit == 64)
 			unitStr = null;
 		else 
 		{
-			calc.firstChangeCalc (cost, objUnit);
+			calc.firstChangeCalc (cost, unit);
 			unitStr = calc.returnChangeUnit ();
 		}
 		isShow = false;
