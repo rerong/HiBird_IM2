@@ -82,19 +82,19 @@ public class lpsItemManager : MonoBehaviour
         // 현진 추가
         	if (origin == trans)
         	{
-            	if (level <= 200)
-            	    ground.GetComponent<MeshRenderer>().material.color = Color.Lerp(canvas.level0.color, canvas.level1.color, (level * 0.005f));
-            	else if (level < 400 && level > 200)
-                	ground.GetComponent<MeshRenderer>().material.color = Color.Lerp(canvas.level1.color, canvas.level2.color, (level - 200) * 0.005f);
+            	if (level <= 400)
+            	    ground.GetComponent<MeshRenderer>().material.color = Color.Lerp(canvas.level0.color, canvas.level1.color, (level * 0.0025f));
+            	/*else if (level < 400 && level > 200)
+                	ground.GetComponent<MeshRenderer>().material.color = Color.Lerp(canvas.level1.color, canvas.level2.color, (level - 200) * 0.005f);*/
         	}
         	else
         	{
             	if (level <= 50)
                 	ground.transform.position = Vector3.Lerp(origin, trans, level * 0.02f);
-            	else if (level <= 250 && level > 50)
-                	ground.GetComponent<MeshRenderer>().material.color = Color.Lerp(canvas.level0.color, canvas.level1.color, (level - 50) * 0.005f);
-            	else if (level < 450 && level > 250)
-                	ground.GetComponent<MeshRenderer>().material.color = Color.Lerp(canvas.level1.color, canvas.level2.color, (level - 250) * 0.005f);
+            	else if (level <= 450 && level > 50)
+                	ground.GetComponent<MeshRenderer>().material.color = Color.Lerp(canvas.level0.color, canvas.level2.color, (level - 50) * 0.0025f);
+            	/*else if (level < 450 && level > 250)
+                	ground.GetComponent<MeshRenderer>().material.color = Color.Lerp(canvas.level1.color, canvas.level2.color, (level - 250) * 0.005f);*/
         	}
 		} 
 		
