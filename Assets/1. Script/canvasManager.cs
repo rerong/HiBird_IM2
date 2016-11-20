@@ -9,24 +9,26 @@ public class canvasManager : MonoBehaviour {
 	public summonBirds summonBird;
 	public GameObject cameraRotate;
 
-	public Button treeMenuBtn;
+    public Button treeMenuBtn;
 	public Button mountainMeunBtn;
 	public Button birdMenuBtn;
 	public Button cashMenuBtn;
 
-	public Text loveDisplay;
-	public Text lpcDisplay;
+	public Text loveDisplay1;
+    public Text loveDisplay2;
+    public Text lpcDisplay;
 	public Text lpsDisplay;
 	public Text cashDisplay;
 	public Text birdDisplay;
-    /*add*/
+
     public GameObject explainPanel;
 
     public Text explanationOfBirdDisplay;
     public Text nameOfBirdDisplay;
     public Text totalQuntityDisplay;
     public Text nowQuntityDisplay;
-    /*for here*/
+
+    public Button loveShowBtn;
 
     public Button menuBtn;
 	public GameObject normalPanel;

@@ -18,7 +18,8 @@ public class openClick : MonoBehaviour {
 		isOpen = !isOpen;
 		canvas.menuPanel.gameObject.SetActive (isOpen);
 		canvas.treePanel.gameObject.SetActive (isOpen);
-		canvas.mountainPanel.gameObject.SetActive (false);
+        canvas.loveShowBtn.gameObject.SetActive(!isOpen);
+        canvas.mountainPanel.gameObject.SetActive (false);
 		canvas.birdPanel.gameObject.SetActive (false);
 		canvas.cashPanel.gameObject.SetActive (false);
 	}

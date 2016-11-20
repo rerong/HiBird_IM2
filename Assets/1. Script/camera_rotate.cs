@@ -32,15 +32,16 @@ public class camera_rotate : MonoBehaviour {
         {
             if (count > 100)
             {
-                count = 0;
                 CameraRotationSpeed_y = -CameraRotationSpeed_y;
-				canvas.menuBtn.interactable = true;
+                canvas.menuBtn.interactable = true;
+                count = 0;
                 break;
             }
-			canvas.menuBtn.interactable = false;
+            canvas.menuBtn.interactable = false;
             count++;
             animationCamera();
             yield return new WaitForSeconds(0.01f);
         }
+        
     }
 }
