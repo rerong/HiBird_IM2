@@ -34,11 +34,6 @@ public class canvasManager : MonoBehaviour {
 	public GameObject normalPanel;
 	public GameObject rarePanel;
 	public GameObject uniquePanel;
-	public Button treeUpgradBtn;
-	public Button moutain1UpgradeBtn;
-	public Button moutain2UpgradeBtn;
-	public Button moutain3UpgradeBtn;
-	public Button moutain4UpgradeBtn;
 	public Button birdTimeSummonBtn;
 	public Button birdSummonBtn;
 	public Button normalBtn;
@@ -49,6 +44,7 @@ public class canvasManager : MonoBehaviour {
 	public GameObject mountainPanel;
 	public GameObject birdPanel;
 	public GameObject cashPanel;
+	public Button closeMeunBtn;
 
     public Slider sumonBirdSilder;
 

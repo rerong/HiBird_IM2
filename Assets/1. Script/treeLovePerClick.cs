@@ -10,7 +10,7 @@ public class treeLovePerClick : MonoBehaviour {
 	private int unit = 64;
 	private string unitStr = null;
     private int level = 1;
-	private float LPC = 1.0f;
+	private float lpc = 1.0f;
 	private int lpcUnit = 64;
 	private string lpcUnitStr = null;
 	private float costRate = 1.07f;
@@ -20,6 +20,28 @@ public class treeLovePerClick : MonoBehaviour {
 // Use this for initialization
 	void Start () 
 	{
+		/*if (PlayerPrefs.HasKey ("cost"))
+			cost = PlayerPrefs.GetFloat ("cost");
+		if (PlayerPrefs.HasKey ("lpc"))
+			lpc = PlayerPrefs.GetFloat ("lpc");
+		if (PlayerPrefs.HasKey ("costRate"))
+			costRate = PlayerPrefs.GetFloat ("costRate");
+		if (PlayerPrefs.HasKey ("LPCRate"))
+			LPCRate = PlayerPrefs.GetFloat ("LPCRate");
+		if (PlayerPrefs.HasKey ("unit"))
+			unit = PlayerPrefs.GetInt ("unit");
+		if (PlayerPrefs.HasKey ("lpcUnit"))
+			lpcUnit = PlayerPrefs.GetInt ("lpcUnit");
+		if (PlayerPrefs.HasKey ("level")) 
+		{
+			level = PlayerPrefs.GetInt ("level");
+			canvas.gameManaging.setTreeLevel (level);
+		}
+		if (PlayerPrefs.HasKey ("unitStr"))
+			unitStr = PlayerPrefs.GetString ("unitStr");
+		if (PlayerPrefs.HasKey ("lpcUnitStr"))
+			lpcUnitStr = PlayerPrefs.GetString ("lpcUnitStr");*/
+		
 	}
 
 // Update is called once per frame
@@ -31,8 +53,15 @@ public class treeLovePerClick : MonoBehaviour {
 			unit = calc.returnChangeNumUnit ();
 			unitStr = calc.returnChangeUnit ();
 		}
-		canvas.gameManaging.setLPC (LPC, lpcUnit, lpcUnitStr);
+		canvas.gameManaging.setLPC (lpc, lpcUnit, lpcUnitStr);
 		treeBuyMoney.text = cost.ToString ("F2") + unitStr + "\n" + level + "level";
+
+		PlayerPrefs.SetFloat ("cost", cost);
+		PlayerPrefs.SetFloat ("lpc", lpc);
+		PlayerPrefs.SetInt ("unit" , unit);
+		PlayerPrefs.SetInt ("lpcUnit" , lpcUnit);
+		PlayerPrefs.SetString ("unitStr", unitStr);
+		PlayerPrefs.SetString ("lpcUnitStr", lpcUnitStr);
 
 	}
 
@@ -42,29 +71,33 @@ public class treeLovePerClick : MonoBehaviour {
 		{
 			canvas.gameManaging.setLove (calc.returnChangeCost(), calc.returnChangeNumUnit(), calc.returnChangeUnit());
 			level += 1;
+			PlayerPrefs.SetInt ("level" , level);
 			canvas.gameManaging.setTreeLevel (level);
 
 			if(level == 10 || level % 25 == 0)
 				canvas.summonBird.setSummon ();
 
-			tree.GetComponent<MeshRenderer> ().material.color = Color.Lerp (Color.gray,Color.white,level*0.0025f); //현진 추가
+			tree.GetComponent<MeshRenderer> ().material.color = Color.Lerp (Color.gray,Color.white,level*0.025f); //현진 추가
 
 			if (level % 200 == 0) 
 			{
 				LPCRate += 0.01f;
 				costRate += 0.01f;
+
+				PlayerPrefs.SetFloat ("costRate", costRate);
+				PlayerPrefs.SetFloat ("LPCRate", LPCRate);
 			}
 
-			LPC *= LPCRate;
+			lpc *= LPCRate;
 
-			if (calc.changeCalcLove (LPC, lpcUnit)) 
+			if (calc.changeCalcLove (lpc, lpcUnit)) 
 			{
-				LPC = calc.returnChangeCost ();
+				lpc = calc.returnChangeCost ();
 				lpcUnit = calc.returnChangeNumUnit ();
 				lpcUnitStr = calc.returnChangeUnit ();
 			}
 
-			canvas.gameManaging.setLPC (LPC, lpcUnit, lpcUnitStr);
+			canvas.gameManaging.setLPC (lpc, lpcUnit, lpcUnitStr);
 			cost *= costRate;
 
 			if (calc.changeCalcLove (cost, unit)) 

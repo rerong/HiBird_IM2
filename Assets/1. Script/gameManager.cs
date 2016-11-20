@@ -38,7 +38,7 @@ public class gameManager : MonoBehaviour
         canvas.lpcDisplay.text = lovePerClick.ToString("F2") + lpcUnitStr;
 		canvas.birdDisplay.text = canvas.flockcontroller._childAmount + " / " + "25";
 		canvas.lpsDisplay.text = lovePerSec.ToString ("F2") + lpsUnitStr;
-		canvas.cashDisplay.text = cash.ToString () + "cash";
+		canvas.cashDisplay.text = cash.ToString ();
 
 		PlayerPrefs.SetFloat ("love", love);
 		PlayerPrefs.SetInt ("loveUnit", loveUnit);

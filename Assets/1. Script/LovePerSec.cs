@@ -18,7 +18,6 @@ public class LovePerSec : MonoBehaviour
 	{
 		calcTotal ();
 		canvas.gameManaging.setLPS (totalLPS, totalLPSUnit, totalLPSStrUnit);
-
     }
 
 	public void calcTotal()
