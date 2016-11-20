@@ -12,9 +12,9 @@ public class gameManager : MonoBehaviour
 	private string loveUnitStr = null;
 	private int lpcUnit = 64;
 	private string lpcUnitStr = null;
-	private int lpsUnit = 64;
 	private string lpsUnitStr = null;
 	private int treeLevel;
+	private int cash = 1;
 
 	private loveCalc calc = new loveCalc();
 
@@ -37,6 +37,13 @@ public class gameManager : MonoBehaviour
 		canvas.lpcDisplay.text = lovePerClick.ToString("F2") + lpcUnitStr;
 		canvas.birdDisplay.text = canvas.flockcontroller._childAmount + " / " + "25";
 		canvas.lpsDisplay.text = lovePerSec.ToString ("F2") + lpsUnitStr;
+		canvas.cashDisplay.text = cash.ToString () + "cash";
+
+		PlayerPrefs.SetFloat ("love", love);
+		PlayerPrefs.SetInt ("loveUnit", loveUnit);
+		PlayerPrefs.SetInt ("cash", cash);
+
+
 	}
 
 	public void Clicked() {
@@ -88,7 +95,6 @@ public class gameManager : MonoBehaviour
 	public void setLPS(float _lps, int _lpsUnit, string _lpsUnitStr)
 	{
 		this.lovePerSec = _lps;
-		this.lpsUnit = _lpsUnit;
 		this.lpsUnitStr = _lpsUnitStr;
 	}
 
