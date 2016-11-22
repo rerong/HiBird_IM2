@@ -8,7 +8,9 @@ public class LovePerSec : MonoBehaviour
 	private int totalLPSUnit = 64;
 	private string totalLPSStrUnit = null;
 	private loveCalc calc = new loveCalc();
-    public lpsItemManager[] items;
+    public groundManager groundLPS;
+    public rockManager [] rockLPS;
+    public mountainManager [] mountainLPS;
 
     void Start() {
 		StartCoroutine(AutoTick());
@@ -20,22 +22,42 @@ public class LovePerSec : MonoBehaviour
 		canvas.gameManaging.setLPS (totalLPS, totalLPSUnit, totalLPSStrUnit);
     }
 
-	public void calcTotal()
+	void calcTotal()
 	{
 		totalLPS = 0;
 		totalLPSUnit = 64;
 
-		foreach(lpsItemManager item in items) 
+		if (groundLPS.getShow() == true) 
 		{
-			if (item.getShow() == true) 
+			calc.addCalc (totalLPS, totalLPSUnit, groundLPS.getObjLPS(), groundLPS.getObjUnit());
+			totalLPS = calc.returnChangeCost();
+			totalLPSUnit = calc.returnChangeNumUnit ();
+			totalLPSStrUnit = calc.returnChangeUnit ();
+		}
+
+		foreach(rockManager rock in rockLPS) 
+		{
+			if (rock.getShow() == true) 
 			{
-				calc.addCalc (totalLPS, totalLPSUnit, item.getObjLPS(), item.getObjUnit());
+				calc.addCalc (totalLPS, totalLPSUnit, rock.getObjLPS(), rock.getObjUnit());
+				totalLPS = calc.returnChangeCost();
+				totalLPSUnit = calc.returnChangeNumUnit ();
+				totalLPSStrUnit = calc.returnChangeUnit ();
+			}
+		}
+
+		foreach(mountainManager mountain in mountainLPS) 
+		{
+			if (mountain.getShow() == true) 
+			{
+				calc.addCalc (totalLPS, totalLPSUnit, mountain.getObjLPS(), mountain.getObjUnit());
 				totalLPS = calc.returnChangeCost();
 				totalLPSUnit = calc.returnChangeNumUnit ();
 				totalLPSStrUnit = calc.returnChangeUnit ();
 			}
 		}
 	}
+
 
     public void AutoGoldPerSec() 
 	{
