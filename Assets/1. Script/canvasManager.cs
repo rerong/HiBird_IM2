@@ -51,4 +51,8 @@ public class canvasManager : MonoBehaviour {
     public Material level0;
     public Material level1;
     public Material level2;
+
+    public Animator MenuBtnAni;
+    public Animator CameraAni;
+    public Animator HeartAni;
 }

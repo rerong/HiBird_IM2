@@ -19,10 +19,10 @@ public class rockManager : MonoBehaviour
 
     //현진 추가
     public GameObject rock;
-    public GameObject rockHeightLimit;
+    /*public GameObject rockHeightLimit;
 
     private Vector3 origin;
-    private Vector3 trans;
+    private Vector3 trans;*/
 
     void Start() 
 	{
@@ -36,8 +36,8 @@ public class rockManager : MonoBehaviour
 		isShow = false;
 
         // 현진 추가
-        origin = rock.transform.position;
-        trans = rockHeightLimit.transform.position;
+        /*origin = rock.transform.position;
+        trans = rockHeightLimit.transform.position;*/
     }
 
 	void Update() 
@@ -81,10 +81,11 @@ public class rockManager : MonoBehaviour
 				objUnit = calc.returnChangeNumUnit ();
 			}
             
-            if (level <= 50)
+            rock.GetComponent<MeshRenderer> ().material.color = Color.Lerp (Color.gray,Color.white,level*0.0025f); //현진 추가
+            /*if (level <= 50)
                 rock.transform.position = Vector3.Lerp(origin, trans, level * 0.02f);
-            else if (level <= 450)
-                rock.GetComponent<MeshRenderer>().material.color = Color.Lerp(canvas.level0.color, canvas.level2.color, (level - 50) * 0.0025f);
+            else if (level <= 400)
+                rock.GetComponent<MeshRenderer>().material.color = Color.Lerp(canvas.level0.color, canvas.level2.color, (level - 50) * 0.0025f);*/
 		} 
 		
     }

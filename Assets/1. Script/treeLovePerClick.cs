@@ -77,7 +77,7 @@ public class treeLovePerClick : MonoBehaviour {
 			if(level == 10 || level % 25 == 0)
 				canvas.summonBird.setSummon ();
 
-			tree.GetComponent<MeshRenderer> ().material.color = Color.Lerp (Color.gray,Color.white,level*0.025f); //현진 추가
+			tree.GetComponent<MeshRenderer> ().material.color = Color.Lerp (Color.gray,Color.white,level*0.0025f); //현진 추가
 
 			if (level % 200 == 0) 
 			{

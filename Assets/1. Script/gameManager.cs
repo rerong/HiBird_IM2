@@ -8,7 +8,7 @@ public class gameManager : MonoBehaviour
 	private float love = 980.0f;
     private float lovePerClick = 1.0f;
 	private float lovePerSec = 1.0f;
-	private int loveUnit = 150;
+	private int loveUnit = 65;
 	private string loveUnitStr = null;
 	private int lpcUnit = 64;
 	private string lpcUnitStr = null;
