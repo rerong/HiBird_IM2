@@ -56,12 +56,12 @@ public class treeLovePerClick : MonoBehaviour {
 		canvas.gameManaging.setLPC (lpc, lpcUnit, lpcUnitStr);
 		treeBuyMoney.text = cost.ToString ("F2") + unitStr + "\n" + level + "level";
 
-		PlayerPrefs.SetFloat ("cost", cost);
+		/*PlayerPrefs.SetFloat ("cost", cost);
 		PlayerPrefs.SetFloat ("lpc", lpc);
 		PlayerPrefs.SetInt ("unit" , unit);
 		PlayerPrefs.SetInt ("lpcUnit" , lpcUnit);
 		PlayerPrefs.SetString ("unitStr", unitStr);
-		PlayerPrefs.SetString ("lpcUnitStr", lpcUnitStr);
+		PlayerPrefs.SetString ("lpcUnitStr", lpcUnitStr);*/
 
 	}
 
@@ -71,7 +71,7 @@ public class treeLovePerClick : MonoBehaviour {
 		{
 			canvas.gameManaging.setLove (calc.returnChangeCost(), calc.returnChangeNumUnit(), calc.returnChangeUnit());
 			level += 1;
-			PlayerPrefs.SetInt ("level" , level);
+			//PlayerPrefs.SetInt ("level" , level);
 			canvas.gameManaging.setTreeLevel (level);
 
 			if(level == 10 || level % 25 == 0)
@@ -84,8 +84,8 @@ public class treeLovePerClick : MonoBehaviour {
 				LPCRate += 0.01f;
 				costRate += 0.01f;
 
-				PlayerPrefs.SetFloat ("costRate", costRate);
-				PlayerPrefs.SetFloat ("LPCRate", LPCRate);
+				//PlayerPrefs.SetFloat ("costRate", costRate);
+				//PlayerPrefs.SetFloat ("LPCRate", LPCRate);
 			}
 
 			lpc *= LPCRate;
