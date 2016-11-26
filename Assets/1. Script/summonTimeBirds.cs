@@ -7,8 +7,6 @@ public class summonTimeBirds : MonoBehaviour {
 
     [Range(-100f, 100f)]
     public float summonTime;
-
-    private bool summon = false;
     private int maxBird = 25;
 
     // Use this for initialization
@@ -20,15 +18,6 @@ public class summonTimeBirds : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (summon)
-        {
-            if (canvas.flockcontroller._childAmount < maxBird)
-            {
-                summon = false;
-                canvas.flockcontroller._childAmount += 1;
-            }
-        }
-
         canvas.sumonBirdSilder.value += Time.deltaTime / summonTime;
 
         if (canvas.sumonBirdSilder.value == 1)
@@ -40,14 +29,9 @@ public class summonTimeBirds : MonoBehaviour {
     {
         if (canvas.flockcontroller._childAmount < maxBird)
         {
-            canvas.flockcontroller._childAmount += 1;
+            canvas.summonBird.setSummon ();
             canvas.sumonBirdSilder.value = 0;
             canvas.birdTimeSummonBtn.interactable = false;
         }
-    }
-
-    public void setSummon()
-    {
-        summon = true;
     }
 }
