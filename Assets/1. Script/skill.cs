@@ -103,6 +103,7 @@ public class skill : MonoBehaviour
 	public void skillLPCIncrease()
 	{
 		lpcIncreaseOn = true;
+		canvas.skillLPCBtn.interactable = false;
 		float lpc = canvas.gameManaging.getLPC ();
 		int lpcUnit = canvas.gameManaging.getLPCUnit();
 
@@ -125,12 +126,14 @@ public class skill : MonoBehaviour
 	public void skillLPSIncrease()
 	{
 		lpsIncreaseOn = true;
+		canvas.skillLPSBtn.interactable = false;
 		canvas.lovePerSecond.setSkillOn (lpsIncrement);
 	}
 
 	public void skillLoveIncrease()
 	{
 		loveIncreaseOn = true;
+		canvas.skillLoveBtn.interactable = false;
 		float lpc = canvas.gameManaging.getLPC ();
 		int lpcUnit = canvas.gameManaging.getLPCUnit();
 
