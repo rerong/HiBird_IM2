@@ -10,7 +10,9 @@ public class skill : MonoBehaviour
 	private bool lpsIncreaseOn = false;
 	private float loveIncrement = 300.0f;
 	private loveCalc calc = new loveCalc();
-	void Start () 
+
+    public skillSlider [] skillCoolTime;
+    void Start () 
 	{
 
 	}
