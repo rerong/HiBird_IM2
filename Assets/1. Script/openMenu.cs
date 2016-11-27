@@ -55,14 +55,15 @@ public class openMenu : MonoBehaviour {
         canvas.CameraAni.Play("CameraUp");
         canvas.HeartAni.Play("HeartDown");
 
-        canvas.menuBtn.gameObject.SetActive(true);
+        if(canvas.MenuBtnAni.GetCurrentAnimatorStateInfo(1).length > canvas.MenuBtnAni.GetCurrentAnimatorStateInfo(1).normalizedTime)
+            canvas.menuBtn.gameObject.SetActive(true);
     }
 
     /*private void animationCamera()
     {
         canvas.cameraRotate.transform.Rotate(CameraRotationSpeed_y / 100.0f, 0, 0);
-    }
-    IEnumerator AutoTick()
+    }*/
+    /*IEnumerator AutoTick()
     {
         while (true)
         {
@@ -70,21 +71,12 @@ public class openMenu : MonoBehaviour {
             {
                 count = 0;
 
-				canvas.menuPanel.gameObject.SetActive (true);
-                canvas.treePanel.gameObject.SetActive (true);
-                canvas.loveShowBtn.gameObject.SetActive (false);
-				canvas.closeMeunBtn.interactable = true;
-				canvas.closeMeunBtn.gameObject.SetActive (true);
-                canvas.mountainPanel.gameObject.SetActive (false);
-                canvas.birdPanel.gameObject.SetActive (false);
-                canvas.cashPanel.gameObject.SetActive (false);
-                
-                canvas.menuBtn.gameObject.SetActive (false);
+                canvas.menuBtn.gameObject.SetActive(true);
+                canvas.menuBtn.interactable = true;
 
                 break;
             }
             count++;
-            animationCamera();
             yield return new WaitForSeconds(0.01f);
         }
         
