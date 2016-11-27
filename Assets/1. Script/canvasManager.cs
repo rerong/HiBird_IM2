@@ -26,8 +26,9 @@ public class canvasManager : MonoBehaviour {
 
     public Text explanationOfBirdDisplay;
     public Text nameOfBirdDisplay;
-    public Text totalQuntityDisplay;
-    public Text nowQuntityDisplay;
+    public Image pictureOfBird;
+    //  public Text totalQuntityDisplay;
+    //  public Text nowQuntityDisplay;
 
     public Button loveShowBtn;
 

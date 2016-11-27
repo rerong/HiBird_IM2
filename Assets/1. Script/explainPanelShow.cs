@@ -36,6 +36,7 @@ public class explainPanelShow : MonoBehaviour {
         {
             canvas.nameOfBirdDisplay.text = btn.transform.FindChild("name").GetComponent<Text>().text;
             canvas.explanationOfBirdDisplay.text = btn.transform.FindChild("explain").GetComponent<Text>().text;
+            canvas.pictureOfBird.sprite = btn.transform.GetComponent<Image>().sprite;
             canvas.explainPanel.SetActive(true);
 
         }
