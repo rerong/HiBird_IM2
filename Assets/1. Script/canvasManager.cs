@@ -56,4 +56,16 @@ public class canvasManager : MonoBehaviour {
     public Animator MenuBtnAni;
     public Animator CameraAni;
     public Animator HeartAni;
+
+    public Button skillLPCBtn;
+    public Button skillLPSBtn;
+    public Button skillLoveBtn;
+    public Button skillResetCoolBtn;
+    public Button skillBirdCoolDownBtn;
+
+    public Slider skillLPCSlider;
+    public Slider skillLPSSlider;
+    public Slider skillLoveSlider;
+    public Slider skillResetCoolSlider;
+    public Slider skillBirdCoolDownSlider;
 }

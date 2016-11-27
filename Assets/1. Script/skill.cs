@@ -6,46 +6,103 @@ public class skill : MonoBehaviour
 	public canvasManager canvas;
 	private float lpcIncrement = 2.0f;
 	private bool lpcIncreaseOn = false;
+	private float lpcSkillActiveTime = 50; 
+	private float lpcSkillCoolTime = 50;
+
 	private float lpsIncrement = 2.0f;
 	private bool lpsIncreaseOn = false;
+	private float lpsSkillActiveTime = 50; 
+	private float lpsSkillCoolTime = 50; 
+
 	private float loveIncrement = 300.0f;
+	private bool loveIncreaseOn = false;
+	private float loveSkillActiveTime = 1; 
+	private float loveSkillCoolTime = 50;
+
 	private loveCalc calc = new loveCalc();
 
-    public skillSlider [] skillCoolTime;
     void Start () 
 	{
 
 	}
 	void Update () 
 	{
-		/*if (lpcIncreaseOn == true)  //and lpcIncreaseBar.value == 1 -> time out
+		if (lpcIncreaseOn == true)
 		{
-			lpcIncreaseOn = false;
+			canvas.skillLPCSlider.value += Time.deltaTime / lpcSkillActiveTime;
 
-			float lpc = canvas.gameManaging.getLPC ();
-			int lpcUnit = canvas.gameManaging.getLPCUnit();
-
-			lpc /= lpcIncrement;
-
-			if (lpc < 1) 
+			if(canvas.skillLPCSlider.value == 1)
 			{
-				lpcUnit -= 1;
-				lpc *= 1000;
-			}
+				lpcIncreaseOn = false;
+				float lpc = canvas.gameManaging.getLPC ();
+				int lpcUnit = canvas.gameManaging.getLPCUnit();
 
-			canvas.gameManaging.setLPC (lpc, lpcUnit);
+				lpc /= lpcIncrement;
+
+				if (lpc < 1) 
+				{
+					lpcUnit -= 1;
+					lpc *= 1000;
+				}
+
+				canvas.gameManaging.setLPC (lpc, lpcUnit);
+			}
 		}
+		else if(lpcIncreaseOn == false)
+		{
+			if(canvas.skillLPCSlider.value != 0)
+				canvas.skillLPCSlider.value -= Time.deltaTime / lpcSkillCoolTime;
+			else
+			{
+				if(canvas.skillLPCBtn.interactable == false)
+					canvas.skillLPCBtn.interactable = true;
+			}
+		}
+
 
 		if (lpsIncreaseOn == true) 
 		{
-			lpsIncreaseOn = false;
-			canvas.lovePerSecond.setSkillOff ();
-		}*/
+			canvas.skillLPSSlider.value += Time.deltaTime / lpsSkillActiveTime;
+
+			if(canvas.skillLPSSlider.value == 1)
+			{
+				lpsIncreaseOn = false;
+				canvas.lovePerSecond.setSkillOff ();
+			}
+		}
+		else if (lpsIncreaseOn == false) 
+		{
+			if(canvas.skillLPSSlider.value != 0)
+				canvas.skillLPSSlider.value -= Time.deltaTime / lpsSkillCoolTime;
+			else
+			{
+				if(canvas.skillLPSBtn.interactable == false)
+					canvas.skillLPSBtn.interactable = true;
+			}
+		}
+
+		if (loveIncreaseOn == true) 
+		{
+			canvas.skillLoveSlider.value += Time.deltaTime / loveSkillActiveTime;
+
+			if(canvas.skillLoveSlider.value == 1)
+				loveIncreaseOn = false;
+		}
+		else if (loveIncreaseOn == false) 
+		{
+			if(canvas.skillLoveSlider.value != 0)
+				canvas.skillLoveSlider.value -= Time.deltaTime / loveSkillCoolTime;
+			else
+			{
+				if(canvas.skillLoveBtn.interactable == false)
+					canvas.skillLoveBtn.interactable = true;
+			}
+		}
 	}
 
 	public void skillLPCIncrease()
 	{
-		lpcIncreaseOn = !lpcIncreaseOn;
+		lpcIncreaseOn = true;
 		float lpc = canvas.gameManaging.getLPC ();
 		int lpcUnit = canvas.gameManaging.getLPCUnit();
 
@@ -63,20 +120,17 @@ public class skill : MonoBehaviour
 		}
 
 		canvas.gameManaging.setLPC (lpc, lpcUnit);
-		Debug.Log ("test" + lpcIncreaseOn);
 	}
 
 	public void skillLPSIncrease()
 	{
-		lpsIncreaseOn = !lpsIncreaseOn;
-		if(lpsIncreaseOn == true)
-			canvas.lovePerSecond.setSkillOn (lpsIncrement);
-		else
-			canvas.lovePerSecond.setSkillOff ();
+		lpsIncreaseOn = true;
+		canvas.lovePerSecond.setSkillOn (lpsIncrement);
 	}
 
 	public void skillLoveIncrease()
 	{
+		loveIncreaseOn = true;
 		float lpc = canvas.gameManaging.getLPC ();
 		int lpcUnit = canvas.gameManaging.getLPCUnit();
 
