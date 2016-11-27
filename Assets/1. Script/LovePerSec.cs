@@ -7,6 +7,8 @@ public class LovePerSec : MonoBehaviour
     private float totalLPS = 0.0f; //Love Per Second
 	private int totalLPSUnit = 64;
 	private string totalLPSStrUnit = null;
+	private bool skillOn = false;
+	private float increment;
 	private loveCalc calc = new loveCalc();
     public groundManager groundLPS;
     public rockManager [] rockLPS;
@@ -19,6 +21,17 @@ public class LovePerSec : MonoBehaviour
     void Update() 
 	{
 		calcTotal ();
+		if (skillOn == true) 
+		{
+			totalLPS *= increment;
+
+			if (calc.changeCalcLove (totalLPS, totalLPSUnit)) 
+			{
+				this.totalLPS = calc.returnChangeCost ();
+				this.totalLPSUnit = calc.returnChangeNumUnit ();
+				this.totalLPSStrUnit = calc.returnChangeUnit ();
+			} 
+		}
 		canvas.gameManaging.setLPS (totalLPS, totalLPSUnit, totalLPSStrUnit);
     }
 
@@ -56,6 +69,17 @@ public class LovePerSec : MonoBehaviour
 				totalLPSStrUnit = calc.returnChangeUnit ();
 			}
 		}
+	}
+
+	public void setSkillOn(float rate)
+	{
+		skillOn = true;
+		increment = rate;
+	}
+
+	public void setSkillOff()
+	{
+		skillOn = false;
 	}
 
 

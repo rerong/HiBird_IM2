@@ -11,6 +11,7 @@ public class gameManager : MonoBehaviour
 	private int loveUnit = 65;
 	private string loveUnitStr = null;
 	private int lpcUnit = 64;
+	private int lpsUnit = 64;
 	private string lpcUnitStr = null;
 	private string lpsUnitStr = null;
 	private int treeLevel;
@@ -69,9 +70,19 @@ public class gameManager : MonoBehaviour
 		return lovePerClick;
 	}
 
+	public int getLPCUnit()
+	{
+		return lpcUnit;
+	}
+
 	public float getLPS()
 	{
 		return lovePerSec;
+	}
+
+	public int getLPSUnit()
+	{
+		return lpsUnit;
 	}
 
 	public int getTreeLevel()
@@ -86,16 +97,25 @@ public class gameManager : MonoBehaviour
 		this.loveUnitStr = _unitStr;
 	}
 
-	public void setLPC(float _lpc, int _lpcUnit, string _lpcUnitStr)
+	public void setLPC(float _lpc, int _lpcUnit)
 	{
-		this.lovePerClick = _lpc;
-		this.lpcUnit = _lpcUnit;
-		this.lpcUnitStr = _lpcUnitStr;
+		if (calc.changeCalcLove (_lpc, _lpcUnit)) 
+		{
+			this.lovePerClick = calc.returnChangeCost ();
+			this.lpcUnit = calc.returnChangeNumUnit ();
+			this.lpcUnitStr = calc.returnChangeUnit ();
+		} 
+		else 
+		{
+			this.lovePerClick = _lpc;
+			this.lpcUnit = _lpcUnit;
+		}
 	}
 
 	public void setLPS(float _lps, int _lpsUnit, string _lpsUnitStr)
 	{
 		this.lovePerSec = _lps;
+		this.lpsUnit = _lpsUnit;
 		this.lpsUnitStr = _lpsUnitStr;
 	}
 

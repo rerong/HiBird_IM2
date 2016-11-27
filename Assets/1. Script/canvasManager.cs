@@ -7,6 +7,7 @@ public class canvasManager : MonoBehaviour {
 	public FlockController flockcontroller;
 	public gameManager gameManaging;
 	public summonBirds summonBird;
+	public LovePerSec lovePerSecond;
 	public GameObject cameraRotate;
 
     public Button treeMenuBtn;
