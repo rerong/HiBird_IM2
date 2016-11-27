@@ -6,18 +6,22 @@ public class skill : MonoBehaviour
 	public canvasManager canvas;
 	private float lpcIncrement = 2.0f;
 	private bool lpcIncreaseOn = false;
-	private float lpcSkillActiveTime = 50; 
-	private float lpcSkillCoolTime = 50;
+	private float lpcSkillActiveTime = 20; 
+	private float lpcSkillCoolTime = 20;
 
 	private float lpsIncrement = 2.0f;
 	private bool lpsIncreaseOn = false;
-	private float lpsSkillActiveTime = 50; 
-	private float lpsSkillCoolTime = 50; 
+	private float lpsSkillActiveTime = 20; 
+	private float lpsSkillCoolTime = 20; 
 
 	private float loveIncrement = 300.0f;
 	private bool loveIncreaseOn = false;
 	private float loveSkillActiveTime = 1; 
-	private float loveSkillCoolTime = 50;
+	private float loveSkillCoolTime = 20;
+
+	private bool resetSkillOn = false;
+	private float resetSkillActiveTime = 1; 
+	private float resetSkillCoolTime = 20;
 
 	private loveCalc calc = new loveCalc();
 
@@ -83,7 +87,7 @@ public class skill : MonoBehaviour
 
 		if (loveIncreaseOn == true) 
 		{
-			canvas.skillLoveSlider.value += Time.deltaTime / loveSkillActiveTime;
+			canvas.skillLoveSlider.value += Time.deltaTime / resetSkillActiveTime;
 
 			if(canvas.skillLoveSlider.value == 1)
 				loveIncreaseOn = false;
@@ -91,11 +95,29 @@ public class skill : MonoBehaviour
 		else if (loveIncreaseOn == false) 
 		{
 			if(canvas.skillLoveSlider.value != 0)
-				canvas.skillLoveSlider.value -= Time.deltaTime / loveSkillCoolTime;
+				canvas.skillLoveSlider.value -= Time.deltaTime / resetSkillCoolTime;
 			else
 			{
 				if(canvas.skillLoveBtn.interactable == false)
 					canvas.skillLoveBtn.interactable = true;
+			}
+		}
+
+		if (resetSkillOn == true) 
+		{
+			canvas.skillResetCoolSlider.value += Time.deltaTime / loveSkillActiveTime;
+
+			if(canvas.skillResetCoolSlider.value == 1)
+				resetSkillOn = false;
+		}
+		else if (resetSkillOn == false) 
+		{
+			if(canvas.skillResetCoolSlider.value != 0)
+				canvas.skillResetCoolSlider.value -= Time.deltaTime / loveSkillCoolTime;
+			else
+			{
+				if(canvas.skillResetCoolBtn.interactable == false)
+					canvas.skillResetCoolBtn.interactable = true;
 			}
 		}
 	}
@@ -146,5 +168,44 @@ public class skill : MonoBehaviour
 
 		calc.addCalc (canvas.gameManaging.getLove(), canvas.gameManaging.getLoveUnit(), lpc, lpcUnit);
 		canvas.gameManaging.setLove(calc.returnChangeCost(), calc.returnChangeNumUnit(), calc.returnChangeUnit());
+	}
+
+	public void skillResetCoolTime()
+	{
+		resetSkillOn = true;
+		canvas.skillResetCoolBtn.interactable = false;
+
+		lpcIncreaseOn = false;
+		float lpc = canvas.gameManaging.getLPC ();
+		int lpcUnit = canvas.gameManaging.getLPCUnit();
+
+		lpc /= lpcIncrement;
+
+		if (lpc < 1) 
+		{
+			lpcUnit -= 1;
+			lpc *= 1000;
+		}
+
+		canvas.gameManaging.setLPC (lpc, lpcUnit);
+		canvas.skillLPCSlider.value = 0;
+		canvas.skillLoveBtn.interactable = true;
+
+		//~ lpc reset
+
+		lpsIncreaseOn = false;
+		canvas.lovePerSecond.setSkillOff ();
+		canvas.skillLPSSlider.value = 0;
+		canvas.skillLPSBtn.interactable = true;
+
+		//~ lps reset
+
+		loveIncreaseOn = false;
+		canvas.skillLoveSlider.value = 0;
+		canvas.skillLoveBtn.interactable = true;
+
+		//~ love reset;
+
+		
 	}
 }
