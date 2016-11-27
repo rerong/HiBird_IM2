@@ -41,8 +41,8 @@ public class groundManager : MonoBehaviour
 		if (isShow)
 			lpsText.text = cost.ToString ("F2") + unitStr + "\n" + (level + 1) + "level\n";
 		else
-			lpsText.text = "tree level : " + upgrade;
-	}
+            lpsText.text = "Tree Level\n" + upgrade + " Open";
+    }
 
 	public void purchasedItem() 
 	{
