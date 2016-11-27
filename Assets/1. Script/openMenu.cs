@@ -26,6 +26,9 @@ public class openMenu : MonoBehaviour {
 
     public void clicked()
     {
+        canvas.setBtn.gameObject.SetActive(false);
+        canvas.goalBtn.gameObject.SetActive(false);
+
         canvas.MenuBtnAni.enabled = true;
         canvas.MenuBtnAni.Play("MenuOpen");
 
@@ -55,8 +58,11 @@ public class openMenu : MonoBehaviour {
         canvas.CameraAni.Play("CameraUp");
         canvas.HeartAni.Play("HeartDown");
 
-        if(canvas.MenuBtnAni.GetCurrentAnimatorStateInfo(1).length > canvas.MenuBtnAni.GetCurrentAnimatorStateInfo(1).normalizedTime)
+       // if (canvas.MenuBtnAni.GetCurrentAnimatorStateInfo(1).length > canvas.MenuBtnAni.GetCurrentAnimatorStateInfo(1).normalizedTime)
             canvas.menuBtn.gameObject.SetActive(true);
+            canvas.setBtn.gameObject.SetActive(true);
+            canvas.goalBtn.gameObject.SetActive(true);
+        
     }
 
     /*private void animationCamera()

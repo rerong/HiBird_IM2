@@ -68,4 +68,10 @@ public class canvasManager : MonoBehaviour {
     public Slider skillLoveSlider;
     public Slider skillResetCoolSlider;
     public Slider skillBirdCoolDownSlider;
+
+    public GameObject setPanel;
+    public GameObject goalPanel;
+    public Button etcCloseBtn;
+    public Button setBtn;
+    public Button goalBtn;
 }
